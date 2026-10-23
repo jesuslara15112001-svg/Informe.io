@@ -1,0 +1,130 @@
+/* Estilos generales de la página */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e9e9e9;
+    margin: 0;
+    padding: 20px;
+    color: #111;
+}
+
+/* Formato tipo hoja A4 */
+.page {
+    background-color: #ffffff;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 25mm 20mm 20mm 20mm;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- ESTILOS DE LA PORTADA --- */
+.portada {
+    justify-content: space-between;
+    text-align: center;
+}
+
+.header-institucional {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titulo-principal {
+    margin: auto 0;
+    padding: 20px 0;
+}
+
+.titulo-principal h1 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Configuración del pie para mandar el nombre bien a la derecha */
+.datos-pie {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20mm;
+}
+
+.datos-pie div:first-child {
+    text-align: left;
+    width: 50%;
+}
+
+.datos-pie div:last-child {
+    text-align: right; /* Manda el texto del bachiller completamente a la esquina derecha */
+    width: 50%;
+}
+
+/* --- ESTILOS DEL CONTENIDO --- */
+.contenido {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 18px;
+    color: #000;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #222;
+}
+
+p {
+    margin-bottom: 12px;
+    text-indent: 30px;
+}
+
+ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 40px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.analogia-box {
+    background-color: #f4f6f8;
+    border-left: 4px solid #004085;
+    padding: 12px 15px;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.analogia-box strong {
+    font-style: normal;
+}
+
+/* Ajuste automático para impresión a PDF */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        page-break-after: always;
+    }
+}

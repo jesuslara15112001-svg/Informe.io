@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe: Capa de Enlace de Datos (Modelo OSI)</title>
+    <!-- Vinculación con el archivo CSS separado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- PÁGINA 1: PORTADA -->
+    <div class="page portada">
+        <div class="header-institucional">
+            República Bolivariana de Venezuela<br>
+            Ministerio del Poder Popular para la Defensa<br>
+            Universidad Nacional Experimental Politécnica de la<br>
+            Fuerza Armada Nacional<br>
+            UNEFA-Núcleo Guárico<br>
+            Ingeniería de Sistemas
+        </div>
+
+        <div class="titulo-principal">
+            <h1>LA CAPA DE ENLACE DE DATOS<br>(MODELO OSI)</h1>
+        </div>
+
+        <div class="datos-pie">
+            <div>
+                <strong>Profesora:</strong><br>
+                Raul Blanco
+            </div>
+            <div>
+                <strong>Bachiller:</strong><br>
+                Jesús Lara<br>
+                V-31.079.893
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: DESARROLLO DEL INFORME -->
+    <div class="page contenido">
+        <h2>1. ¿Qué es la Capa de Enlace de Datos?</h2>
+        <p>
+            La Capa de Enlace de Datos es la <strong>segunda capa (Capa 2)</strong> del modelo OSI. Su función principal es tomar la información física (bits puros que viajan en cables o señales inalámbricas) y organizarla de manera lógica para que viaje de forma segura y sin errores entre dos dispositivos directamente conectados en la misma red local.
+        </p>
+
+        <div class="analogia-box">
+            <strong>Explicación sencilla (Analogía del envío postal):</strong><br>
+            Si los cables y conectores (Capa 1) son las carreteras por donde transitan los vehículos, la Capa de Enlace de Datos (Capa 2) es quien empaqueta las cartas en sobres con la dirección exacta del destinatario y verifica que el sobre no llegue roto a su destino.
+        </div>
+
+        <h2>2. Funciones Principales</h2>
+        <p>Para comprender su funcionamiento, la Capa 2 realiza cuatro tareas clave:</p>
+        
+        <ul>
+            <li><strong>Entramado (Framing):</strong> Agrupa los bits individuales en paquetes organizados llamados <em>Tramas (Frames)</em>. Una trama contiene los datos del mensaje junto a un encabezado y un pie de página con información de control.</li>
+            <li><strong>Direccionamiento Físico (Dirección MAC):</strong> Utiliza la dirección MAC grabada de fábrica en la tarjeta de red (NIC) del equipo para identificar de forma única a quién envía (origen) y quién recibe (destino).</li>
+            <li><strong>Detección de Errores:</strong> Añade un código al final de la trama (CheckSum / CRC). Si algún bit se altera durante la transmisión física, la capa de enlace lo detecta y rechaza la trama defectuosa.</li>
+            <li><strong>Control de Flujo:</strong> Evita que un emisor rápido saturé de datos a un receptor más lento.</li>
+        </ul>
+
+        <h2>3. Subcapas del Enlace de Datos</h2>
+        <p>El estándar IEEE 802 divide esta capa en dos subcapas para hacerla más eficiente:</p>
+        <ul>
+            <li><strong>LLC (Logical Link Control):</strong> Se encarga de la comunicación con el software superior (Capa 3 - Red) y gestiona el flujo de los datos.</li>
+            <li><strong>MAC (Media Access Control):</strong> Se encarga del hardware, administra las direcciones MAC y controla el acceso al medio físico (quién transmite en cada instante).</li>
+        </ul>
+
+        <h2>4. Dispositivo Clave de la Capa 2</h2>
+        <p>
+            El dispositivo de red representativo de esta capa es el <strong>Switch (Conmutador)</strong>. A diferencia de un Hub básico, el Switch memoriza las direcciones MAC de las computadoras conectadas a sus puertos y entrega las tramas directamente al equipo de destino.
+        </p>
+
+        <h2>5. Conclusión</h2>
+        <p>
+            En resumen, la Capa de Enlace de Datos convierte un medio físico propenso a interferencias en un enlace confiable. Garantiza que los datos se estructuren en tramas, lleguen a la dirección MAC correcta dentro de la red local y sin errores de transmisión.
+        </p>
+    </div>
+
+</body>
+</html>
